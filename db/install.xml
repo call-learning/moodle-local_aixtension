@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/aixtension/db" VERSION="20250821" COMMENT="XMLDB file for Moodle local/aixtension">
+    <TABLES>
+        <TABLE NAME="local_aixtension_action_tts" COMMENT="Generate audio from text table storage.">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+
+                <FIELD NAME="texttoread" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="model" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Model name used to generate the speech"/>
+                <FIELD NAME="voice" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
+                <FIELD NAME="format" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
