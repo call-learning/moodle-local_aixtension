@@ -19,7 +19,7 @@ namespace local_aixtension\aiactions;
 use local_aixtension\aiactions\responses\response_convert_text_to_speech;
 
 /**
- * Test process_text_to_speech action methods.
+ * Test convert_text_to_speech action methods.
  *
  * @package    local_aixtension
  * @copyright  2025 Laurent David <laurent@call-learning.fr>
