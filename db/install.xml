@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="local/aixtension/db" VERSION="20250821" COMMENT="XMLDB file for Moodle local/aixtension">
-    <TABLES>
-        <TABLE NAME="local_aixtension_action_tts" COMMENT="Generate audio from text table storage.">
-            <FIELDS>
-                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
-
-                <FIELD NAME="texttoread" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
-                <FIELD NAME="model" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Model name used to generate the speech"/>
-                <FIELD NAME="voice" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
-                <FIELD NAME="format" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
-            </FIELDS>
-            <KEYS>
-                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
-            </KEYS>
-        </TABLE>
-    </TABLES>
+<XMLDB PATH="local/aixtension/db" VERSION="20251029" COMMENT="XMLDB file for Moodle local/aixtension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_aixtension_action_tts" COMMENT="Generate audio from text table storage.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="texttoread" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="model" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Model name used to generate the speech"/>
+        <FIELD NAME="voice" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
+        <FIELD NAME="format" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Voice name"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="local_aixtension_action_stt" COMMENT="Generate text audio table storage.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="storedfileid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="text" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Resulting text"/>
+        <FIELD NAME="stats" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Json object containing each word or segment of sentence with at least start time, end time and confidence ({start:XXX, end:XXX, text:XXX, confidence:YYY}"/>
+        <FIELD NAME="detectedlanguage" TYPE="char" LENGTH="254" NOTNULL="false" SEQUENCE="false" COMMENT="Detected language"/>
+        <FIELD NAME="language" TYPE="char" LENGTH="254" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="model" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Model name used to generate the speech"/>
+        <FIELD NAME="additionaloptions" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Json formatted additional options"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
 </XMLDB>
