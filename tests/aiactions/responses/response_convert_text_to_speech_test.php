@@ -13,11 +13,12 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 namespace local_aixtension\aiactions\responses;
 /**
  * Test response_process_text_to_speech action methods.
  *
- * @package    core_ai
+ * @package    local_aixtension
  * @copyright  2025 Laurent David <laurent@call-learning.fr>
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers     \local_aixtension\aiactions\responses\response_convert_text_to_speech

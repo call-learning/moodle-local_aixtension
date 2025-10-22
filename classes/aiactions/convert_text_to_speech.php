@@ -13,13 +13,14 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 namespace local_aixtension\aiactions;
 use core_ai\aiactions\responses\response_base;
 
 /**
  * Generate audio from text
  *
- * @package    core_ai
+ * @package    local_aixtension
  * @copyright  Laurent David <laurent@call-learning.fr>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -33,8 +34,8 @@ class convert_text_to_speech extends \core_ai\aiactions\base {
      * @param int $contextid The context id the action was created in.
      * @param int $userid The user id making the request.
      * @param string $texttoread The text to synthesize.
-     * @param string $voice Optional voice name used for generation.
-     * @param string $format Optional output format (e.g. "mp3").
+     * @param string|null $voice Optional voice name used for generation.
+     * @param string|null $format Optional output format (e.g. "mp3").
      */
     public function __construct(
         int $contextid,
@@ -42,9 +43,9 @@ class convert_text_to_speech extends \core_ai\aiactions\base {
         protected int $userid,
         /** @var string The prompt text used to generate the image */
         protected string $texttoread,
-        /** @param string|null $voice Optional voice name used for generation. */
+        /** @var string|null $voice Optional voice name used for generation. */
         protected ?string $voice = null,
-        /** @param string|null $format Optional output format (e.g. "mp3"). */
+        /** @var string|null $format Optional output format (e.g. "mp3"). */
         protected ?string $format = null,
     ) {
         parent::__construct($contextid);

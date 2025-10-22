@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'AI Extension';
 $string['action_convert_text_to_speech'] = 'Convert text to speech (audio response)';
 $string['action_convert_text_to_speech_desc'] = 'Convert text to speech (audio response)';
 $string['action_convert_text_to_speech_instruction'] = 'Read this text aloud using the specified voice and model.';
+$string['pluginname'] = 'AI Extension';

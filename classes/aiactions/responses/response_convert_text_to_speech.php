@@ -13,6 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 namespace local_aixtension\aiactions\responses;
 use core_ai\aiactions\responses\response_base;
 
@@ -21,7 +22,7 @@ use core_ai\aiactions\responses\response_base;
  *
  * Any method that processes an action must return an instance of this class.
  *
- * @package    core_ai
+ * @package    local_aixtension
  * @copyright  Laurent David <laurent@call-learning.fr>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

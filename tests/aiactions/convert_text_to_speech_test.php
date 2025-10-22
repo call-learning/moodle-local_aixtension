@@ -21,7 +21,7 @@ use local_aixtension\aiactions\responses\response_convert_text_to_speech;
 /**
  * Test process_text_to_speech action methods.
  *
- * @package    core_ai
+ * @package    local_aixtension
  * @copyright  2025 Laurent David <laurent@call-learning.fr>
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers     convert_text_to_speech
