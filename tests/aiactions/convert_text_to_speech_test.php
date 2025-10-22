@@ -24,7 +24,8 @@ use local_aixtension\aiactions\responses\response_convert_text_to_speech;
  * @package    local_aixtension
  * @copyright  2025 Laurent David <laurent@call-learning.fr>
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @covers     convert_text_to_speech
+ * @coversDefaultClass \local_aixtension\aiactions\convert_text_to_speech
+ * @covers \local_aixtension\aiactions\convert_text_to_speech
  */
 final class convert_text_to_speech_test extends \advanced_testcase {
     /**
