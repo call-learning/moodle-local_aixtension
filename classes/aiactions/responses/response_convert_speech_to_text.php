@@ -29,15 +29,15 @@ class response_convert_speech_to_text extends response_base {
     /**
      * @var string $detectedlanguage
      */
-    private string $detectedlanguage;
+    private string $detectedlanguage = '';
     /**
      * @var string $text
      */
-    private string $text;
+    private string $text = '';
     /**
      * @var array|object[]
      */
-    private array $stats;
+    private array $stats = [];
 
     /**
      * Constructor.

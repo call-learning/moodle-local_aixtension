@@ -67,9 +67,6 @@ class convert_speech_to_text extends \core_ai\aiactions\base {
 
         $responsearr = $response->get_response_data();
         $text = (string)($responsearr['text'] ?? '');
-        if ($text === '') {
-            throw new moodle_exception('invalidresponse', 'error', '', 'Missing transcribed text.');
-        }
         $record = new \stdClass();
         $record->userid = $this->userid;
         $record->storedfileid = $this->audiofile->get_id();
