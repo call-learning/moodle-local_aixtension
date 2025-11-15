@@ -122,7 +122,7 @@ class convert_speech_to_text extends \core_ai\aiactions\base {
         // MIME allowlist: keep it short and universal.
         $allowed = [
             'audio/wav', 'audio/x-wav', 'audio/mpeg', 'audio/mp3',
-            'audio/mp4', 'audio/webm', 'audio/ogg', 'audio/opus', 'audio/flac',
+            'audio/mp4', 'audio/webm', 'audio/ogg', 'audio/opus', 'audio/flac','video/webm',
         ];
         if (!in_array($this->inputmeta['mime'], $allowed, true)) {
             throw new moodle_exception('invalidfiletype', 'error', '', 'Unsupported audio type: ' . $this->inputmeta['mime']);
